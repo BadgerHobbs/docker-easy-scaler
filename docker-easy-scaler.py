@@ -17,8 +17,8 @@ class ContainerMonitor:
     def Setup(self):
         print("Setting up Container Monitor...")
 
-        self.creationCooldown = 0
-        self.destructionCooldown = 0
+        self.creationCooldown = self.config["Creation"]["Cooldown"]
+        self.destructionCooldown = self.config["Destruction"]["Cooldown"]
 
         self.dockerClient = docker.from_env()
 
@@ -44,7 +44,7 @@ class ContainerMonitor:
             )
         )
         self.channel = self.connection.channel()
-        self.queue = self.channel.queue_declare(self.config["Metric-Tool"]["RMQ-Queue"])
+        self.queue = self.channel.queue_declare(self.config["Metric-Tool"]["RMQ-Queue"], durable=True)
 
     def Disconnect(self):
 
@@ -59,6 +59,7 @@ class ContainerMonitor:
 
         while True:
 
+            self.queue = self.channel.queue_declare(self.config["Metric-Tool"]["RMQ-Queue"], durable=True, passive=True)
             currentQueueLength = self.queue.method.message_count
 
             if (currentQueueLength > self.config["Creation"]["Value"] or len(self.GetContainersOfType()) < self.config["Minimum-Count"]) and self.creationCooldown <= 0:
@@ -111,9 +112,21 @@ class ContainerMonitor:
     def Delete(self):
         print("Deleting Existing Container...")
 
-        currentContainers = self.GetContainersOfType()
+        containerToRemove = self.GetContainersOfType()[-1]
+        
+        containerToRemove.stop()
+        print("Container Stopped...")
 
-        currentContainers[-1].remove()
+        for i in range(60):
+
+            try:
+                containerToRemove.remove()
+                print("Container Removed...")
+                break
+            except:
+                pass
+
+            time.sleep(1)
 
 
 def GenerateContainerMonitors(configPath):

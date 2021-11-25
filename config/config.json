@@ -1,7 +1,7 @@
 {
     "Containers": [
         {
-            "Minimum-Count": 3,
+            "Minimum-Count": 1,
             "Docker-Configuration": {
                 "Name": "bindays-worker-collectors",
                 "Image": "bindays-worker-generic:latest",
@@ -28,6 +28,316 @@
             },
             "Destruction": {
                 "Value": 5,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-plymouthcouncil-collections",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "PlymouthCouncil-Collections"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "PlymouthCouncil-Collections"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-plymouthcouncil-addresses",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "PlymouthCouncil-Addresses"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "PlymouthCouncil-Addresses"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-southgloucestershirecouncil-collections",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "SouthGloucestershireCouncil-Collections"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "SouthGloucestershireCouncil-Collections"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-southgloucestershirecouncil-addresses",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "SouthGloucestershireCouncil-Addresses"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "SouthGloucestershireCouncil-Addresses"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-worthingboroughcouncil-collections",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "WorthingBoroughCouncil-Collections"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "WorthingBoroughCouncil-Collections"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-worthingboroughcouncil-addresses",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "WorthingBoroughCouncil-Addresses"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "WorthingBoroughCouncil-Addresses"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-southhamsdistrictcouncil-collections",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "SouthHamsDistrictCouncil-Collections"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "SouthHamsDistrictCouncil-Collections"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-southhamsdistrictcouncil-addresses",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "SouthHamsDistrictCouncil-Addresses"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "SouthHamsDistrictCouncil-Addresses"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-solihullmetropolitanboroughcouncil-collections",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "SolihullMetropolitanBoroughCouncil-Collections"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "SolihullMetropolitanBoroughCouncil-Collections"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
+                "Cooldown": 30
+            }
+        },
+        {
+            "Minimum-Count": 1,
+            "Docker-Configuration": {
+                "Name": "bindays-worker-solihullmetropolitanboroughcouncil-addresses",
+                "Image": "bindays-worker-generic:latest",
+                "Network": "bindaysapistack_bindays-api-network",
+                "Environment": {
+                    "WORKER_TYPE": "SolihullMetropolitanBoroughCouncil-Addresses"
+                },
+                "Restart Policy": {
+                    "Name": "on-failure", 
+                    "MaximumRetryCount": 5
+                },
+                "Detach": true
+            },
+            "Metric-Tool": {
+                "Type": "RabbitMQ",
+                "IP-Address": "172.28.1.1",
+                "Port": "5672",
+                "RMQ-Queue": "SolihullMetropolitanBoroughCouncil-Addresses"
+            },
+            "Check-Frequency-Seconds": 0.1,
+            "Creation": {
+                "Value": 5,
+                "Cooldown": 30
+            },
+            "Destruction": {
+                "Value": 1,
                 "Cooldown": 30
             }
         }

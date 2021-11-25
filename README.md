@@ -11,6 +11,7 @@ docker run -d \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /home/administrator/docker/containers/docker-easy-scaler/config:/config \
     --network "bindaysapistack_bindays-api-network" \
+    --restart on-failure \
     docker-easy-scaler
 ```
 
