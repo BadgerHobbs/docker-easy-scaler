@@ -1,21 +1,3 @@
-# Docker-Easy-Scaler
-
-Container which dynamically scales your different containers based on per container type metric, such as rabbitmq queues
-
-#### Docker Setup Commands
-```python
-docker build -t docker-easy-scaler:latest .
-
-docker run -d \
-    --name docker-easy-scaler \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v /home/administrator/docker/containers/docker-easy-scaler/config:/config \
-    --network "bindaysapistack_bindays-api-network" \
-    docker-easy-scaler
-```
-
-#### Config Layout
-```json
 {
     "Containers": [
         {
@@ -51,4 +33,3 @@ docker run -d \
         }
     ]
 }
-```
