@@ -35,6 +35,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-plymouthcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
@@ -67,6 +68,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-plymouthcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
@@ -99,6 +101,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-southgloucestershirecouncil-collections",
                 "Image": "bindays-worker-generic:latest",
@@ -131,6 +134,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-southgloucestershirecouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
@@ -163,6 +167,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-worthingboroughcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
@@ -195,6 +200,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-worthingboroughcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
@@ -227,6 +233,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-southhamsdistrictcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
@@ -259,6 +266,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-southhamsdistrictcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
@@ -291,6 +299,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-solihullmetropolitanboroughcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
@@ -323,6 +332,7 @@
         },
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-solihullmetropolitanboroughcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
