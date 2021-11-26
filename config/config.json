@@ -5,7 +5,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-collectors",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "Collectors"
                 },
@@ -37,7 +37,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-plymouthcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "PlymouthCouncil-Collections"
                 },
@@ -69,7 +69,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-plymouthcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "PlymouthCouncil-Addresses"
                 },
@@ -101,7 +101,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-southgloucestershirecouncil-collections",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "SouthGloucestershireCouncil-Collections"
                 },
@@ -133,7 +133,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-southgloucestershirecouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "SouthGloucestershireCouncil-Addresses"
                 },
@@ -165,7 +165,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-worthingboroughcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "WorthingBoroughCouncil-Collections"
                 },
@@ -197,7 +197,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-worthingboroughcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "WorthingBoroughCouncil-Addresses"
                 },
@@ -229,7 +229,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-southhamsdistrictcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "SouthHamsDistrictCouncil-Collections"
                 },
@@ -261,7 +261,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-southhamsdistrictcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "SouthHamsDistrictCouncil-Addresses"
                 },
@@ -293,7 +293,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-solihullmetropolitanboroughcouncil-collections",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "SolihullMetropolitanBoroughCouncil-Collections"
                 },
@@ -325,7 +325,7 @@
             "Docker-Configuration": {
                 "Name": "bindays-worker-solihullmetropolitanboroughcouncil-addresses",
                 "Image": "bindays-worker-generic:latest",
-                "Network": "bindaysapistack_bindays-api-network",
+                "Network": "bindays-api-stack_bindays-api-network",
                 "Environment": {
                     "WORKER_TYPE": "SolihullMetropolitanBoroughCouncil-Addresses"
                 },
