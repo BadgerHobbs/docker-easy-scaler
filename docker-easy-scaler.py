@@ -133,5 +133,8 @@ def GenerateContainerMonitors(configPath):
 
         containerMonitors[containerConfig["Docker-Configuration"]["Name"]] = ContainerMonitor(containerConfig)
 
+        if containerConfig["Stage-Monitor-Creation"] == True:
+            
+            time.sleep(containerConfig["Check-Frequency-Seconds"]/ len(config["Containers"]))
 
 GenerateContainerMonitors("/config/config.json")

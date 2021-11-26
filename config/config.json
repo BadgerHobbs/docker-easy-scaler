@@ -2,6 +2,7 @@
     "Containers": [
         {
             "Minimum-Count": 1,
+            "Stage-Monitor-Creation": true,
             "Docker-Configuration": {
                 "Name": "bindays-worker-collectors",
                 "Image": "bindays-worker-generic:latest",
