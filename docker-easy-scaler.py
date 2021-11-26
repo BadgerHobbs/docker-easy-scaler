@@ -1,11 +1,11 @@
 
 import multiprocessing
-import pika
 import json
 import docker
 import copy
 import random
 import time
+from pyrabbit.api import Client
 
 class ContainerMonitor:
 
@@ -37,14 +37,7 @@ class ContainerMonitor:
     def Connect(self):
         print("Connecting...")
 
-        self.connection = pika.BlockingConnection(
-            pika.ConnectionParameters(
-                host=self.config["Metric-Tool"]["IP-Address"],
-                port=self.config["Metric-Tool"]["Port"]
-            )
-        )
-        self.channel = self.connection.channel()
-        self.queue = self.channel.queue_declare(self.config["Metric-Tool"]["RMQ-Queue"], durable=True)
+        self.pyrabbitClient = Client(f"{self.config['Metric-Tool']['IP-Address']}:{self.config['Metric-Tool']['RMQ-Management-Port']}", "guest", "guest")
 
     def Disconnect(self):
 
@@ -58,9 +51,8 @@ class ContainerMonitor:
         print("Beginning Watch...")
 
         while True:
-
-            self.queue = self.channel.queue_declare(self.config["Metric-Tool"]["RMQ-Queue"], durable=True, passive=True)
-            currentQueueLength = self.queue.method.message_count
+            
+            currentQueueLength = self.pyrabbitClient.get_queue_depth('/', self.config["Metric-Tool"]["RMQ-Queue"])
 
             if (currentQueueLength > self.config["Creation"]["Value"] or len(self.GetContainersOfType()) < self.config["Minimum-Count"]) and self.creationCooldown <= 0:
 

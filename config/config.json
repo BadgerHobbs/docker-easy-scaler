@@ -19,7 +19,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "Collectors"
+                "RMQ-Queue": "Collectors",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -50,7 +51,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "PlymouthCouncil-Collections"
+                "RMQ-Queue": "PlymouthCouncil-Collections",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -81,7 +83,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "PlymouthCouncil-Addresses"
+                "RMQ-Queue": "PlymouthCouncil-Addresses",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -112,7 +115,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "SouthGloucestershireCouncil-Collections"
+                "RMQ-Queue": "SouthGloucestershireCouncil-Collections",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -143,7 +147,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "SouthGloucestershireCouncil-Addresses"
+                "RMQ-Queue": "SouthGloucestershireCouncil-Addresses",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -174,7 +179,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "WorthingBoroughCouncil-Collections"
+                "RMQ-Queue": "WorthingBoroughCouncil-Collections",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -205,7 +211,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "WorthingBoroughCouncil-Addresses"
+                "RMQ-Queue": "WorthingBoroughCouncil-Addresses",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -236,7 +243,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "SouthHamsDistrictCouncil-Collections"
+                "RMQ-Queue": "SouthHamsDistrictCouncil-Collections",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -267,7 +275,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "SouthHamsDistrictCouncil-Addresses"
+                "RMQ-Queue": "SouthHamsDistrictCouncil-Addresses",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -298,7 +307,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "SolihullMetropolitanBoroughCouncil-Collections"
+                "RMQ-Queue": "SolihullMetropolitanBoroughCouncil-Collections",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
@@ -329,7 +339,8 @@
                 "Type": "RabbitMQ",
                 "IP-Address": "172.28.1.1",
                 "Port": "5672",
-                "RMQ-Queue": "SolihullMetropolitanBoroughCouncil-Addresses"
+                "RMQ-Queue": "SolihullMetropolitanBoroughCouncil-Addresses",
+                "RMQ-Management-Port": "15672"
             },
             "Check-Frequency-Seconds": 30,
             "Creation": {
