@@ -1,6 +1,6 @@
 # Docker-Easy-Scaler
 
-Container which dynamically scales your different containers based on per container type metric, such as rabbitmq queues
+Container which dynamically scales your different containers based on per container type metric, such as rabbitmq queues. The solution as it stands is functional, but somewhat crude. Basically for those who want a temporary scalable set of containers without setting up Kubernetes (or similar).
 
 #### Docker Setup Commands
 ```python
